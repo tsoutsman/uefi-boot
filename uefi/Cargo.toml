@@ -1,0 +1,12 @@
+[package]
+name = "uefi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cfg-if = "*"
+log = "*"
+uefi = { version = "*", features = ["alloc", "exts", "logger"] }
+uefi-services = "*"
+xmas-elf = "*"
+zero = "*"

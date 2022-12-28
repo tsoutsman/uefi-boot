@@ -22,8 +22,8 @@ kernel.elf:
 build: boot.efi kernel.elf
 	mkdir -p $(PWD)/build
 	mkdir -p $(PWD)/build/root/efi/boot
-	cp $(UEFI)/target/aarch64-unknown-uefi/release/uefi.efi $(ROOT)/boot.efi
-	cp $(KERNEL)/target/aarch64-unknown-none/release/kernel $(ROOT)/kernel.elf
+	cp $(PWD)/target/aarch64-unknown-uefi/release/uefi.efi $(ROOT)/boot.efi
+	cp $(PWD)/target/aarch64-unknown-none/release/kernel $(ROOT)/kernel.elf
 
 clippy:
 	cargo clippy --manifest-path $(UEFI)/Cargo.toml --release --target aarch64-unknown-uefi $(BUILD_STD)
